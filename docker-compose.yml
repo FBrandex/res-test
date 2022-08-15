@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: . 
+    environment:
+      NODE_ENV: development
+      JWT_SECRET: 1hard_to_guess_secret7890a
+      PORT: 3000
+    ports:
+      - "8080:3000"
